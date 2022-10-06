@@ -12,12 +12,12 @@ app.use( express.json() );
 // })
 
 app.get("/pizza", async (req, res) => {
-  const theaters = await Pizza.find()
-  res.json(theaters)
+  const pizza = await Pizza.find()
+  res.json(pizza)
 })
 
 if(await connectMongoose() ) {
   app.listen(port, ()=> {
-    console.log("listening to port ", port);
+    console.log("Listening to port ", port);
   })
 }
