@@ -15,8 +15,6 @@ app.get("/pizza", async (req, res) => {
   const theaters = await Pizza.find()
   res.json(theaters)
 })
-// app.use("/person", personRoutes);
-// app.use("/wine", wineRoutes);
 
 if(await connectMongoose() ) {
   app.listen(port, ()=> {
