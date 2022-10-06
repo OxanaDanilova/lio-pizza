@@ -5,4 +5,4 @@
 3. git checkout dev
 4. git pull origin dev
 5. git merge 'your-branch'
-6. 6. git push origin dev
+6. git push origin dev
