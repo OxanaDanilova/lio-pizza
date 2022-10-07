@@ -1,0 +1,24 @@
+.cart-wrapper {
+  display: flex;
+  width: 110rem;
+  margin: 2rem auto;
+}
+
+.order-wrapper {
+  width: 70rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-wrapper {
+  width: 30rem;
+  height: 12rem;
+  background-color: #f4f6f7;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
