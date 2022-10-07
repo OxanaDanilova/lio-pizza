@@ -1,23 +1,43 @@
-import React,{useEffect,useState} from 'react'
+
 import "./Home.css"
-import axios from "axios"
 
-function Home() {
-    const[data,setData]= useState([])
 
-    useEffect(()=>{
-        async function getData(){
-        const apiData =   await axios.get("http://localhost:5000/pizza")
-            setData(apiData)
-        }
-        getData()
-    },[])
-    console.log(data.data)
+function Home({data}) {
+  
+  console.log(data)
   return (
     <div className='home'>
-      <div>Haaaalo</div>
-      <div className='header'></div>
-      <div className='main'></div>
+      <div className='header'>
+        <div className="logo">
+         
+
+        <span>p</span>
+        <span>i</span>
+        <span>z</span>
+        <span>z</span>
+        <span>a</span>
+        <span></span>
+       
+        </div>
+        <div className="title">
+      Pizza lio
+        </div>
+      <nav className= "nav">
+          <div>Home</div>
+          <div>Cart</div>
+          <div>About us</div>
+      </nav>
+      </div>
+     
+      <div className='main'>
+        {data.map((item)=>{
+          return(
+            <div>
+              
+            </div>
+          )
+        })}
+      </div>
       <div className='sidebar'></div>
     </div>
 
