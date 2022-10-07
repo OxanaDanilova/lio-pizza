@@ -16,12 +16,44 @@ function App() {
   useEffect(()=>{
       async function getData(){
       const apiData =   await axios.get("http://localhost:5000/pizza")
-          setData(apiData)
+          setData(apiData.data)
       }
       getData()
   },[])
  
   return (
+    <div className='home'>
+    <header >
+    <div className="logo">
+    <span>p</span>
+    <span>i</span>
+    <span>z</span>
+    <span>z</span>
+    <span>a</span>
+    <span></span>
+    </div>
+    <div className="title">
+  Pizza lio
+    </div>
+  <nav className= "nav">
+      <div>Home</div>
+      <div>Cart</div>
+      <div>About us</div>
+  </nav>
+  <div className="search">
+
+  <form action="">
+    <input list="pizza" name="pizza" />
+    <datalist id="pizza">
+    <option value="Capricciosa"></option>
+    <option value="Diavola"></option>
+    <option value="Margherita"></option>
+    <option value="Prosciutto"></option>
+    <option value="Wurstel"></option>
+    </datalist>
+  </form>
+  </div>
+  </header>
     <Router>
     <div className="App">
     <Routes>
@@ -32,6 +64,7 @@ function App() {
       
     </div>
     </Router>
+    </div>
   );
 }
 
