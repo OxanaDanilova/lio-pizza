@@ -5,7 +5,8 @@ main{
     grid-template-columns: 14% 21% 21% 21% 21%;
     gap: 2vw;
     height: 100vh;
-    
+    font-family: 'Lobster', cursive;
+   
 }
  section {
     height: 80vh;
@@ -19,15 +20,16 @@ main{
     align-items: center;
     gap: 2vw;
     overflow-y: scroll;
-    background-color: rgba(255,255,255,0.2);
-    
+    background-color: rgba(0,0,0,0.1);
+    color: black;
+  
 }
 .sidebar{
     margin-top: 35%;
     margin-right: 10%;
     height: 60vh;
     grid-column: 2/3;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(0,0,0,0.1);
     border-radius: 15%;
     -webkit-border-radius: 15%;
     -moz-border-radius: 15%;

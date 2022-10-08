@@ -1,5 +1,5 @@
 
-import "./Main.css"
+import "./PizzaList.css"
 
 
 function Home({data}) {

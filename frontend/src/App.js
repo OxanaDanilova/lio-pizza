@@ -7,7 +7,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Main from './components/Main';
+import PizzaList from './components/PizzaList';
 
 function App() {
   
@@ -23,7 +23,7 @@ function App() {
  
   return (
     <Router>
-    <div className='home'>
+     <div className='home'>
     <header >
     <div className="logo">
     <span>p</span>
@@ -55,7 +55,7 @@ function App() {
   <form action="">
     <input list="pizza" name="pizza" />
     <datalist id="pizza">
-    <option value="Capricciosa"></option>
+    <option value="Capricciosa"></option>  {/* value={data? data[0].name :""} */}
     <option value="Diavola"></option>
     <option value="Margherita"></option>
     <option value="Prosciutto"></option>
@@ -64,16 +64,17 @@ function App() {
   </form>
   </div>
   </header>
-   
+    
    
     <Routes>
 
-    <Route path={"/"} element={<Main data={data}/>} />
+    <Route path={"/"} element={< PizzaList  data={data}/>} />
+    
 
     </Routes>
       
    
-    </div>
+    </div> 
     </Router>
   );
 }

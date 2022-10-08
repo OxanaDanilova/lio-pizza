@@ -1,6 +1,6 @@
-.home {
+ .home {
     height: 100vh;
-    background-image: radial-gradient(transparent, rgb(171, 167, 167)), url("./pizza.jpg");
+    background-image: radial-gradient(transparent, rgb(243, 238, 238)), url("./pizza.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
@@ -24,33 +24,37 @@ header {
     width: 5vw;
     height: 5vw;
     opacity: 0;
-    animation: show 1.5s 1s linear forwards;
-    -webkit-animation: show 1.5s 1s linear forwards;
+    animation: show 1.5s 1.5s linear forwards;
+    -webkit-animation: show 1.5s 1.5s linear forwards;
 }
 span {
     position: absolute;
     font-size: 1.5vw;
-    color: #3c6767;
+    
 }
 span:nth-child(1) {
     rotate: -90deg;
     left: 0px;
     top: 25px;
+    color: #3c674a;
 }
 span:nth-child(2) {
     rotate: -80deg;
     left: 10px;
     top: 10px;
+    color: #f11919;
 }
 span:nth-child(3) {
     rotate: -50deg;
     left: 13px;
     top: -4px;
+    color: #0918ed;
 }
 span:nth-child(4) {
     rotate: -28deg;
     left: 28px;
     top: -14px;
+    color: #f40ef0;
 }
 span:nth-child(5) {
     rotate: -5deg;
