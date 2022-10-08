@@ -22,6 +22,7 @@ function App() {
   },[])
  
   return (
+    <Router>
     <div className='home'>
     <header >
     <div className="logo">
@@ -36,9 +37,18 @@ function App() {
   Pizza lio
     </div>
   <nav className= "nav">
-      <div>Home</div>
+    <NavLink className='homenav'>
+
+      <div >Home</div>
+    </NavLink>
+    <NavLink className="cart">
+
       <div>Cart</div>
+    </NavLink>
+    <NavLink className="aboutus">
+
       <div>About us</div>
+    </NavLink>
   </nav>
   <div className="search">
 
@@ -54,17 +64,17 @@ function App() {
   </form>
   </div>
   </header>
-    <Router>
-    <div className="App">
+   
+   
     <Routes>
 
     <Route path={"/"} element={<Main data={data}/>} />
 
     </Routes>
       
+   
     </div>
     </Router>
-    </div>
   );
 }
 
