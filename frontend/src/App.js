@@ -7,7 +7,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Home from './components/Home';
+import Main from './components/Main';
 
 function App() {
   
@@ -58,7 +58,7 @@ function App() {
     <div className="App">
     <Routes>
 
-    <Route path={"/"} element={<Home data={data}/>} />
+    <Route path={"/"} element={<Main data={data}/>} />
 
     </Routes>
       
