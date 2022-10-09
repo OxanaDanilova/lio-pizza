@@ -12,7 +12,12 @@ const pizzaSchema = new Schema({
     info: {
         type: String
     },
-
+    isVegetarian: {
+        type: Boolean
+    },
+    img: {
+        type: String
+    },
     price: {
         big: {
             type: Number
