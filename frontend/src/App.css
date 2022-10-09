@@ -81,11 +81,28 @@ span:nth-child(6) {
     -webkit-filter: blur(3px);
     font-size: 2.5vw;
     opacity: 0;
-    animation: movetitle 1.5s linear forwards, show 1.4s 1.5s forwards;
-    -webkit-animation: movetitle 1.5s linear forwards, show 1.4s 1.5s forwards;
+    animation: move-title 1.5s linear forwards, show 1.4s 1.5s forwards;
+    -webkit-animation: move-title 1.5s linear forwards, show 1.4s 1.5s forwards;
 }
-
-@keyframes movetitle {
+.pizza-letter {
+    position: absolute;
+    right: -5%;
+    top: 12%;
+    width:1.8vw;
+    height: 1.8vw;
+    background-image: url("./pizza.png");
+    background-size: cover;
+    animation:move-pizza-letter 3s 3s linear forwards ;
+    -webkit-animation:move-pizza-letter 3s 3s linear forwards ;
+}
+@keyframes move-pizza-letter{
+    to{
+    right: 44.8%;
+    top: 12%;
+    rotate: -360deg;
+    }
+}
+@keyframes move-title {
     to {
         opacity: 1;
         left: 50%;
@@ -97,7 +114,7 @@ span:nth-child(6) {
         -o-transform: translate(-50%);
     }
 }
-@keyframes movenav {
+@keyframes move-nav {
     to {
         opacity: 1;
         left: 50%;
@@ -125,11 +142,10 @@ span:nth-child(6) {
     filter: blur(5px);
     -webkit-filter: blur(3px);
     opacity: 0;
-    animation: movenav 1.5s linear forwards, show 1.4s 1.5s forwards;
-    -webkit-animation: movenav 1.5s linear forwards, show 1.4s 1.5s forwards;
-    
+    animation: move-nav 1.5s linear forwards, show 1.4s 1.5s forwards;
+    -webkit-animation: move-nav 1.5s linear forwards, show 1.4s 1.5s forwards;
 }
-.navlink:hover{
+.nav-link:hover{
     color: #4b879b;
     transition: 1s;
     -webkit-transition: 1s;
@@ -137,9 +153,9 @@ span:nth-child(6) {
     -ms-transition: 1s;
     -o-transition: 1s;
 }
-.homenav,
+.home-nav,
 .cart,
-.aboutus {
+.about-us {
     text-decoration: none;
     color: white;
 }

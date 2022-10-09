@@ -24,20 +24,25 @@ function App() {
     <span>z</span>
     <span>a</span>
     <span></span>
+    
+
+    
+    
     </div>
-    <div className="title">
+    <div className="title" >
   Pizza lio
     </div>
+    <div className='pizza-letter'></div>
   <nav className= "nav">
-    <NavLink className='navlink homenav'>
+    <NavLink className='nav-link home-nav'>
 
       <div >Home</div>
     </NavLink>
-    <NavLink className="navlink cart">
+    <NavLink className="nav-link cart">
 
       <div>Cart</div>
     </NavLink>
-    <NavLink className="navlink aboutus">
+    <NavLink className="nav-link about-us">
 
       <div>About us</div>
     </NavLink>

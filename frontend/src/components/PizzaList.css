@@ -68,10 +68,19 @@ img {
     align-items: center;
     justify-content: center;
     row-gap: 2.5vw;
-    font-size: 1.5vw;
+    font-size: 1.6vw;
     border-radius: 15%;
     -webkit-border-radius: 15%;
     -moz-border-radius: 15%;
     -ms-border-radius: 15%;
     -o-border-radius: 15%;
+}
+.sidebar-title span{
+    position: absolute;
+    left: 25.5%;
+    top: 34.3%;
+    width:1.8vw;
+    height: 1.8vw;
+    background-image: url("../pizza.png");
+    background-size: cover;
 }

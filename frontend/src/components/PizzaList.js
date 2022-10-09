@@ -23,8 +23,8 @@ function PizzaList() {
         })}
       </section>
       <div className='sidebar'>
-        <div className="sidebar-title">Pizza Lio</div>
-        <div className="addres"> Antunisstr.44 65781 Kön</div>
+        <div className="sidebar-title">Pizza Lio <span></span></div>
+        <div className="address"> Antunisstr.44 65781 Kön</div>
         <div className="tel">034 767 989 890</div>
        
       </div>
