@@ -1,5 +1,4 @@
-import React,{useEffect,useState} from 'react'
-import axios from "axios"
+import { PizzaContextProvider } from './components/PizzaContext';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -10,19 +9,12 @@ import {
 import PizzaList from './components/PizzaList';
 
 function App() {
-  
-  const[data,setData]= useState([])
-
-  useEffect(()=>{
-      async function getData(){
-      const apiData =   await axios.get("http://localhost:5000/pizza")
-          setData(apiData.data)
-      }
-      getData()
-  },[])
  
+  
   return (
     <Router>
+      <PizzaContextProvider>
+    
      <div className='home'>
     <header >
     <div className="logo">
@@ -55,7 +47,7 @@ function App() {
   <form action="">
     <input list="pizza" name="pizza" />
     <datalist id="pizza">
-    <option value="Capricciosa"></option>  {/* value={data? data[0].name :""} */}
+    <option value=""></option>  {/* value={data? data[0].name :""} */}
     <option value="Diavola"></option>
     <option value="Margherita"></option>
     <option value="Prosciutto"></option>
@@ -64,17 +56,12 @@ function App() {
   </form>
   </div>
   </header>
-    
-   
     <Routes>
-
-    <Route path={"/"} element={< PizzaList  data={data}/>} />
-    
-
+    <Route path={"/"} element={< PizzaList />} />
     </Routes>
-      
-   
     </div> 
+    
+    </PizzaContextProvider>
     </Router>
   );
 }

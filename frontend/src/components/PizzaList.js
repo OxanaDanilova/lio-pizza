@@ -1,24 +1,38 @@
-
+import React, { useContext } from "react";
+import { PizzaContext } from "./PizzaContext"
 import "./PizzaList.css"
 
 
-function Home({data}) {
+function Home() {
   
-  console.log(data)
+  const pizzaContext = useContext(PizzaContext);
+
   return (
     <main>
     
      
       <section >
-        {data.map((item)=>{
+        {pizzaContext.data.map((card)=>{
           return(
-            <div key={item._id}>
-              <div>{item.name}</div>
+            <div className="card" key={card._id}>
+              <div className="card-img">
+              <img src={card.img} alt="Foto not avalible" />
+              </div >
+              <div className="card-name">{card.name}</div>
+              <div className="card-info">{card.info}</div>
+              <div className="order">
+
+              <button className="minus">-</button>
+              <div className="amount">0</div>
+              <button className="plus">+</button>
+              </div>
             </div>
           )
         })}
       </section>
-      <div className='sidebar'></div>
+      <div className='sidebar'>
+        
+      </div>
     </main>
 
   )
