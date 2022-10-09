@@ -5,6 +5,8 @@ export const PizzaContext = createContext(null)
 
 export const  PizzaContextProvider =({children})=>{
     const[data,setData]= useState([])
+    const[amount,setAmount]=useState(0)
+   
 
     useEffect(()=>{
         async function getData(){

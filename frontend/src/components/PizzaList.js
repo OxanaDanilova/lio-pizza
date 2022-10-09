@@ -1,16 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext,useState } from "react";
 import { PizzaContext } from "./PizzaContext"
 import "./PizzaList.css"
 
 
-function Home() {
+function PizzaList() {
   
   const pizzaContext = useContext(PizzaContext);
-
+ 
   return (
     <main>
-    
-     
       <section >
         {pizzaContext.data.map((card)=>{
           return(
@@ -20,22 +18,19 @@ function Home() {
               </div >
               <div className="card-name">{card.name}</div>
               <div className="card-info">{card.info}</div>
-              <div className="order">
-
-              <button className="minus">-</button>
-              <div className="amount">0</div>
-              <button className="plus">+</button>
-              </div>
             </div>
           )
         })}
       </section>
       <div className='sidebar'>
-        
+        <div className="sidebar-title">Pizza Lio</div>
+        <div className="addres"> Antunisstr.44 65781 Kön</div>
+        <div className="tel">034 767 989 890</div>
+       
       </div>
     </main>
 
   )
 }
 
-export default Home
+export default PizzaList

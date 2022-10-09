@@ -29,15 +29,15 @@ function App() {
   Pizza lio
     </div>
   <nav className= "nav">
-    <NavLink className='homenav'>
+    <NavLink className='navlink homenav'>
 
       <div >Home</div>
     </NavLink>
-    <NavLink className="cart">
+    <NavLink className="navlink cart">
 
       <div>Cart</div>
     </NavLink>
-    <NavLink className="aboutus">
+    <NavLink className="navlink aboutus">
 
       <div>About us</div>
     </NavLink>
