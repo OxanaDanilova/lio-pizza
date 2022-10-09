@@ -1,10 +1,11 @@
  .home {
     height: 100vh;
-    background-image: radial-gradient(transparent, rgb(243, 238, 238)), url("./pizza.jpg");
+    background-image: radial-gradient(transparent, rgb(254, 251, 251)), url("./pizza.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     overflow: hidden;
+    user-select: none;
 }
 header {
     position: relative;
@@ -36,25 +37,25 @@ span:nth-child(1) {
     rotate: -90deg;
     left: 0px;
     top: 25px;
-    color: #3c674a;
+    color: #4bac6b;
 }
 span:nth-child(2) {
     rotate: -80deg;
     left: 10px;
     top: 10px;
-    color: #f11919;
+    color: tomato;
 }
 span:nth-child(3) {
     rotate: -50deg;
     left: 13px;
     top: -4px;
-    color: #0918ed;
+    color: #5c66f4;
 }
 span:nth-child(4) {
     rotate: -28deg;
     left: 28px;
     top: -14px;
-    color: #f40ef0;
+    color: #fb36eb;
 }
 span:nth-child(5) {
     rotate: -5deg;
@@ -62,8 +63,8 @@ span:nth-child(5) {
     top: -20px;
 }
 span:nth-child(6) {
-    left: 35px;
-    top: 20px;
+    left: 32px;
+    top: 22px;
     rotate: -50deg;
     width: 30px;
     height: 30px;
