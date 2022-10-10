@@ -74,8 +74,9 @@ img {
     -moz-border-radius: 15%;
     -ms-border-radius: 15%;
     -o-border-radius: 15%;
+
 }
-.sidebar-title span{
+.sidebar-pizza-logo{
     position: absolute;
     left: 25.5%;
     top: 34.3%;
@@ -83,4 +84,22 @@ img {
     height: 1.8vw;
     background-image: url("../pizza.png");
     background-size: cover;
+}
+.sidebar div {
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    animation: show-letters 1s 2.5s linear forwards;
+    -webkit-animation: show-letters 1s 2.5s linear forwards;
+}
+@keyframes show-letters {
+    to{
+        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+}
 }

@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     color: white;
     overflow: hidden;
+    user-select: none;
 }
 
 header {
@@ -38,25 +39,25 @@ span:nth-child(1) {
     rotate: -90deg;
     left: 0px;
     top: 25px;
-    color: #3c674a;
+    
 }
 span:nth-child(2) {
     rotate: -80deg;
     left: 10px;
     top: 10px;
-    color: #f11919;
+    
 }
 span:nth-child(3) {
     rotate: -50deg;
     left: 13px;
     top: -4px;
-    color: #0918ed;
+    
 }
 span:nth-child(4) {
     rotate: -28deg;
     left: 28px;
     top: -14px;
-    color: #f40ef0;
+   
 }
 span:nth-child(5) {
     rotate: -5deg;
@@ -92,8 +93,8 @@ span:nth-child(6) {
     height: 1.8vw;
     background-image: url("./pizza.png");
     background-size: cover;
-    animation:move-pizza-letter 3s 3s linear forwards ;
-    -webkit-animation:move-pizza-letter 3s 3s linear forwards ;
+    animation:move-pizza-letter 3s 3s ease-in-out forwards ;
+    -webkit-animation:move-pizza-letter 3s 3s ease-in-out forwards ;
 }
 @keyframes move-pizza-letter{
     to{
