@@ -14,12 +14,12 @@ function PizzaList() {
     
    const favFilter = data.filter((el)=> el._id === e.target.value )
    const favObject = favFilter[0]
-   console.log(favObject)
+ 
    setCart([...cart,favObject])
    setOrderNum(cart.length +1)
   }
 console.log("fav",cart)
-console.log(orderNum)
+
 
 
 
