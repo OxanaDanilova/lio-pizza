@@ -1,13 +1,9 @@
-import React, { useContext,useState,useEffect } from "react";
-import { PizzaContext } from "./PizzaContext"
+import React, { useState,useEffect } from "react";
 import "./PizzaList.css"
 import axios from "axios"
 
 
 function PizzaList() {
-  
-  const pizzaContext = useContext(PizzaContext);
-  /* const data = pizzaContext.data */
   const[data,setData]= useState([])
   const [cart,setCart]=useState([])
   const [orderNum,setOrderNum]=useState(0)
@@ -24,20 +20,16 @@ function PizzaList() {
     
    const cartFilter = data.filter((el)=> el._id === e.target.value )
    const cartObject = cartFilter[0]
- 
    setCart([...cart,cartObject])
    setOrderNum(cart.length +1)
-  }
-console.log("fav",cart)
-
-
-  function searchHandler (e){
-    const filteredData = data.filter((el)=>el.name === e.target.value)
-    setData(filteredData)
    
   }
 
-
+  function searchHandler (e){
+         const filteredData = data.filter((el)=>el.name === e.target.value)
+      setData(filteredData)
+      console.log(e.target.value)
+  }
 
 
   return (
@@ -61,14 +53,15 @@ console.log("fav",cart)
       <div className="search">
 
 <form action="">
-  <input list="pizza" name="pizza" onChange={searchHandler}/>
-  <datalist id="pizza" >
-  <option value="Capricciosa"></option>  {/* value={data? data[0].name :""} */}
-  <option value="Diavola"></option>
-  <option value="Margherita"></option>
-  <option value="Prosciutto"></option>
-  <option value="Wurstel"></option>
-  </datalist>
+  <label htmlFor="search"></label>
+  <select className="select" id="search" onChange={searchHandler}>
+  <option value="Capricciosa">Capricciosa</option>  {/* value={data? data[0].name :""} */}
+  <option value="Diavola">Diavola</option>
+  <option value="Margherita">Margherita</option>
+  <option value="Prosciutto">Prosciutto</option>
+  <option value="Wurstel">Wurstel</option>
+  </select>
+
 </form>
 </div>
         <div className="sidebar-title">Pizza Lio </div>

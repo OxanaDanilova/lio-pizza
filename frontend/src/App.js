@@ -1,4 +1,4 @@
-import { PizzaContextProvider } from './components/PizzaContext';
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -13,7 +13,7 @@ function App() {
   
   return (
     <Router>
-      <PizzaContextProvider>
+     
     
      <div className='home'>
     <header >
@@ -53,7 +53,7 @@ function App() {
     </Routes>
     </div> 
     
-    </PizzaContextProvider>
+   
     </Router>
   );
 }
