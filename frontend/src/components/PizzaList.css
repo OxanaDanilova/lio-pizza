@@ -125,7 +125,7 @@ img {
 }
 .cart-fa::after{
     position: absolute;
-    left: 42%;
+    left: 45%;
     top: 10%;
     content: attr(data-icon);
     font-size: 1.5vw;
