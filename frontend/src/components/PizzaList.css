@@ -1,0 +1,151 @@
+main {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 14% 21% 21% 21% 21%;
+    gap: 2vw;
+    height: 100vh;
+    font-family: "Lobster", cursive;
+}
+section {
+    height: 80vh;
+    margin-top: 5%;
+    margin-right: 15%;
+    grid-column: 3/6;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.card {
+    margin-top: 13%;
+    min-height: 20vw;
+    max-height: fit-content;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 1vw;
+    text-align: center;
+    opacity: 0;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+    animation: show 1s .5s linear forwards;
+    -webkit-animation: show 1s .5s linear forwards;
+    
+}
+.card-img {
+    grid-column: 1/-1;
+    grid-row: 1;
+}
+img {
+    width: 100%;
+    height: 13vw;
+    border-top-left-radius: 15%;
+    border-top-right-radius: 15%;
+}
+.card-name {
+    font-size: 1.2vw;
+    color: rgb(31, 114, 133);
+}
+.card-info {
+    overflow: hidden;
+    font-size: 1vw;
+   height: 6vw;
+ 
+}
+.cart-btn{
+    margin-top: 5%;
+    border: none;
+    background-color:rgb(255, 111, 0);
+    color: white;
+    font-weight: bold;
+    border-radius: 10%;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
+
+.sidebar {
+    margin-top: 35%;
+    margin-right: 10%;
+    height: 60vh;
+    grid-column: 2/3;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2vw;
+    font-size: 1.4vw;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+
+}
+.search input {
+   margin-top: 20%;
+    width: 10vw;
+    height: 1.3vw;
+    outline: none;
+    border: none;
+    caret-color: rgb(0, 123, 255);
+    font-size: 1vw;
+    font-weight: bold;
+    color: #e6420f;
+    border-radius: 7%;
+    -webkit-border-radius: 7%;
+    -moz-border-radius: 7%;
+    -ms-border-radius: 7%;
+    -o-border-radius: 7%;
+}
+.sidebar-title{
+    font-size: 2vw;
+}
+.sidebar-pizza-logo{
+  
+    width:2.5vw;
+    height: 2.5vw;
+    background-image: url("../pizza.png");
+    background-size: cover;
+
+}
+.cart-fa{
+    font-size: 3vw;
+   
+}
+.cart-fa::after{
+    position: absolute;
+    left: 45%;
+    top: 10%;
+    content: attr(data-icon);
+    font-size: 1.5vw;
+    color: red;
+}
+.sidebar div {
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+    -moz-transform: rotateX(90deg);
+    -ms-transform: rotateX(90deg);
+    -o-transform: rotateX(90deg);
+    animation: show-letters 1s 2.5s linear forwards;
+    -webkit-animation: show-letters 1s 2.5s linear forwards;
+}
+@keyframes show-letters {
+    to{
+        transform: rotateX(0deg);
+        -webkit-transform: rotateX(0deg);
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        -o-transform: rotateX(0deg);
+}
+}
