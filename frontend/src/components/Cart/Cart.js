@@ -14,11 +14,12 @@ const arr = [
       medium: 8,
       small: 6,
     },
+    id: 0,
   },
   {
     name: "La Pizza grande rucola con prosciutto",
     ingredients: ["Mozzarella", "Schinken", "Rucola"],
-    info: "Extra grande – extra lecker: original italienische Pizzakreation mit knusprig-dünnem Boden, belegt mit Tomaten, Mozzarella und feinem Rucola.",
+    info: "Extra grande - extra lecker: original italienische Pizzakreation mit knusprig-dünnem Boden, belegt mit Tomaten, Mozzarella und feinem Rucola.",
     isVegetarian: false,
     img: "https://pizzerialamia.sk/assets/images/products/196/55-(kopirovat).jpg",
     price: {
@@ -26,6 +27,7 @@ const arr = [
       medium: 8,
       small: 5,
     },
+    id: 1,
   },
 ];
 
@@ -60,17 +62,36 @@ export default function Cart() {
     setTotalPrice(myTotalPrice);
   };
 
+  const deleteOrder = (name) => {
+    const updatedArr = pizzaArr.filter((pizza, index) => {
+      return pizza.name !== name;
+    });
+    setPizzaArr(updatedArr);
+    const myTotalItems = updatedArr
+      .map((pizza) => pizza.quantity)
+      .reduce((a, b) => +a + +b, 0);
+    const myTotalPrice = updatedArr
+      .map((pizza) => pizza.totalPrice)
+      .reduce((a, b) => +a + +b, 0);
+    setTotalItems(myTotalItems);
+    setTotalPrice(myTotalPrice);
+  };
+
   return (
     <div className="cart-wrapper">
       <section className="order-wrapper">
-        {pizzaArr.map((pizza, index) => (
-          <PizzaItem
-            pizza={pizza}
-            key={index}
-            changeOrder={changeOrder}
-            id={index}
-          />
-        ))}
+        {pizzaArr.map((pizza, index) => {
+          return (
+            <PizzaItem
+              testArr={pizzaArr}
+              pizza={pizza}
+              key={index}
+              changeOrder={changeOrder}
+              deleteOrder={deleteOrder}
+              id={index}
+            />
+          );
+        })}
       </section>
       <section className="total-wrapper">
         <p>Total items: {totalItems}</p>

@@ -32,3 +32,13 @@
   text-align: justify;
   font-size: 0.9rem;
 }
+
+.delete-icon {
+  height: 2rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: red;
+}

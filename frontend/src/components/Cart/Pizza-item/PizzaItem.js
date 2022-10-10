@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./PizzaItem.css";
+import { MdDeleteForever } from "react-icons/md";
 
-export default function PizzaItem({ pizza, changeOrder, id }) {
+export default function PizzaItem({ pizza, changeOrder, id, deleteOrder }) {
   const [size, setSize] = useState("small");
   const [quantity, setQuantity] = useState(1);
   const [order, setOrder] = useState(pizza);
+
+  useEffect(() => {
+    setOrder(pizza);
+  }, [pizza]);
+  const deleteCurrentOrder = () => {
+    deleteOrder(order.name);
+  };
   const changeSize = (e) => {
     setSize(e.target.value);
     const updTotalPrice = order.quantity * order.price[e.target.value];
@@ -47,6 +55,10 @@ export default function PizzaItem({ pizza, changeOrder, id }) {
           ))}
         </div>
         <p className="pizza-info">{order.info}</p>
+        <MdDeleteForever
+          className="delete-icon"
+          onClick={() => deleteCurrentOrder()}
+        />
       </div>
       <select className="pizza-size" onChange={(e) => changeSize(e)}>
         <option value="small">small</option>
