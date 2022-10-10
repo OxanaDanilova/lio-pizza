@@ -1,14 +1,24 @@
-import React, { useContext,useState } from "react";
+import React, { useContext,useState,useEffect } from "react";
 import { PizzaContext } from "./PizzaContext"
 import "./PizzaList.css"
+import axios from "axios"
 
 
 function PizzaList() {
   
   const pizzaContext = useContext(PizzaContext);
-  const data = pizzaContext.data
+  /* const data = pizzaContext.data */
+  const[data,setData]= useState([])
   const [cart,setCart]=useState([])
   const [orderNum,setOrderNum]=useState(0)
+
+  useEffect(()=>{
+    async function getData(){
+    const apiData =   await axios.get("http://localhost:5000/pizza")
+        setData(apiData.data)
+    }
+    getData()
+},[])
 
   function cartHandler (e){
     
@@ -19,6 +29,13 @@ function PizzaList() {
    setOrderNum(cart.length +1)
   }
 console.log("fav",cart)
+
+
+  function searchHandler (e){
+    const filteredData = data.filter((el)=>el.name === e.target.value)
+    setData(filteredData)
+   
+  }
 
 
 
@@ -44,8 +61,8 @@ console.log("fav",cart)
       <div className="search">
 
 <form action="">
-  <input list="pizza" name="pizza" />
-  <datalist id="pizza">
+  <input list="pizza" name="pizza" onChange={searchHandler}/>
+  <datalist id="pizza" >
   <option value="Capricciosa"></option>  {/* value={data? data[0].name :""} */}
   <option value="Diavola"></option>
   <option value="Margherita"></option>
