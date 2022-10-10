@@ -7,20 +7,22 @@ function PizzaList() {
   
   const pizzaContext = useContext(PizzaContext);
   const data = pizzaContext.data
-  const [favorite,setFavorite]=useState([])
+  const [cart,setCart]=useState([])
+  const [orderNum,setOrderNum]=useState(0)
 
-  function favoriteHandler (e){
-    setFavorite(data.map((item)=>{
-      if(item._id === e.target.value){
-        return {
-          ...favorite,
-          name:item.name,
-        }
-      }
-      return item
-    }))
+  function cartHandler (e){
+    
+   const favFilter = data.filter((el)=> el._id === e.target.value )
+   const favObject = favFilter[0]
+   console.log(favObject)
+   setCart([...cart,favObject])
+   setOrderNum(cart.length +1)
   }
- 
+console.log("fav",cart)
+console.log(orderNum)
+
+
+
   return (
    
     <main>
@@ -33,16 +35,30 @@ function PizzaList() {
               </div >
               <div className="card-name">{card.name}</div>
               <div className="card-info">{card.info}</div>
-              <button className="favorite" value={card._id} onClick={favoriteHandler}>Add to favorite</button>
+              <button className="cart-btn" value={card._id} onClick={cartHandler}>Add to Cart</button>
             </div>
           )
         })}
       </section>
       <div className='sidebar'>
+      <div className="search">
+
+<form action="">
+  <input list="pizza" name="pizza" />
+  <datalist id="pizza">
+  <option value="Capricciosa"></option>  {/* value={data? data[0].name :""} */}
+  <option value="Diavola"></option>
+  <option value="Margherita"></option>
+  <option value="Prosciutto"></option>
+  <option value="Wurstel"></option>
+  </datalist>
+</form>
+</div>
         <div className="sidebar-title">Pizza Lio </div>
         <div className="sidebar-pizza-logo"></div>
         <div className="address"> Antunisstr.44 65781 Köln</div>
         <div className="tel">034 767 989 890</div>
+        <div className=""><i class="fa-solid fa-cart-shopping"></i></div>
        
       </div>
     </main>

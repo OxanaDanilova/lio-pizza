@@ -160,21 +160,3 @@ span:nth-child(6) {
     text-decoration: none;
     color: white;
 }
-.search input {
-    position: absolute;
-    width: 10vw;
-    height: 1.3vw;
-    left: 70%;
-    top: 67%;
-    outline: none;
-    border: none;
-    caret-color: rgb(0, 123, 255);
-    font-size: 1vw;
-    font-weight: bold;
-    color: #e6420f;
-    border-radius: 7%;
-    -webkit-border-radius: 7%;
-    -moz-border-radius: 7%;
-    -ms-border-radius: 7%;
-    -o-border-radius: 7%;
-}

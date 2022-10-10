@@ -43,23 +43,10 @@ function App() {
       <div>Cart</div>
     </NavLink>
     <NavLink className="nav-link about-us">
-
-      <div>About us</div>
+     <div>About us</div>
     </NavLink>
-  </nav>
-  <div className="search">
-
-  <form action="">
-    <input list="pizza" name="pizza" />
-    <datalist id="pizza">
-    <option value=""></option>  {/* value={data? data[0].name :""} */}
-    <option value="Diavola"></option>
-    <option value="Margherita"></option>
-    <option value="Prosciutto"></option>
-    <option value="Wurstel"></option>
-    </datalist>
-  </form>
-  </div>
+    </nav>
+ 
   </header>
     <Routes>
     <Route path={"/"} element={< PizzaList />} />
