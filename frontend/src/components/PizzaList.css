@@ -61,6 +61,7 @@ img {
  
 }
 .cart-btn{
+    margin-top: 5%;
     border: none;
     background-color:rgb(255, 111, 0);
     color: white;
@@ -83,7 +84,7 @@ img {
     align-items: center;
     justify-content: flex-start;
     row-gap: 2vw;
-    font-size: 1.6vw;
+    font-size: 1.4vw;
     border-radius: 15%;
     -webkit-border-radius: 15%;
     -moz-border-radius: 15%;
@@ -107,14 +108,29 @@ img {
     -ms-border-radius: 7%;
     -o-border-radius: 7%;
 }
+.sidebar-title{
+    font-size: 2vw;
+}
 .sidebar-pizza-logo{
   
-    width:2vw;
-    height: 2vw;
+    width:2.5vw;
+    height: 2.5vw;
     background-image: url("../pizza.png");
     background-size: cover;
-}
 
+}
+.cart-fa{
+    font-size: 3vw;
+   
+}
+.cart-fa::after{
+    position: absolute;
+    left: 42%;
+    top: 10%;
+    content: attr(data-icon);
+    font-size: 1.5vw;
+    color: red;
+}
 .sidebar div {
     transform: rotateX(90deg);
     -webkit-transform: rotateX(90deg);

@@ -58,7 +58,8 @@ console.log(orderNum)
         <div className="sidebar-pizza-logo"></div>
         <div className="address"> Antunisstr.44 65781 Köln</div>
         <div className="tel">034 767 989 890</div>
-        <div className=""><i class="fa-solid fa-cart-shopping"></i></div>
+        <div className="cart-fa" data-icon={orderNum}><i class="fa-solid fa-cart-shopping"></i></div>
+        
        
       </div>
     </main>
