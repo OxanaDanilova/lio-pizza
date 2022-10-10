@@ -1,8 +1,14 @@
 import { Router } from "express";
-import { getAllPizza } from "../controller/pizza-controller"
+import { getAllPizza, getPizzaById } from "../controller/pizza-controller.js"
 
 
 const router = new Router();
 
 router.route("/")
-  .get(getAllPizza())
+  .get(getAllPizza)
+
+
+router.route("/:id")
+  .get(getPizzaById)
+
+export default router

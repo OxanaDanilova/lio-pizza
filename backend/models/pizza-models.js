@@ -33,6 +33,6 @@ const pizzaSchema = new Schema({
     },
 })
 
-const Pizza = model("Pizza", pizzaSchema)
+const PizzaModel = model("Pizza", pizzaSchema)
 
-export default Pizza
+export default PizzaModel
