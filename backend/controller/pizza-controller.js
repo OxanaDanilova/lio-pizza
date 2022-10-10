@@ -5,7 +5,6 @@ import PizzaModel from "../models/pizza-models.js"
 /** 
  * @param {express.Response} res
  */
-
 export const getAllPizza = async (_, res) => {
     try {
         const allPizza = await PizzaModel.find({});
