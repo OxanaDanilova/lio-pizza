@@ -34,13 +34,42 @@ export default function Cart() {
     .map((pizza) => pizza.price.small)
     .reduce((a, b) => a + b);
 
+  const cartArr = arr.map((pizza) => {
+    return {
+      ...pizza,
+      quantity: 1,
+      selectedSize: "small",
+      totalPrice: pizza.price.small,
+    };
+  });
+
   const [totalItems, setTotalItems] = useState(arr.length);
   const [totalPrice, setTotalPrice] = useState(startTottalPrice);
+  const [pizzaArr, setPizzaArr] = useState(cartArr);
+
+  const changeOrder = (order, id) => {
+    pizzaArr[id] = order;
+    setPizzaArr(pizzaArr);
+    const myTotalItems = pizzaArr
+      .map((pizza) => pizza.quantity)
+      .reduce((a, b) => +a + +b, 0);
+    const myTotalPrice = pizzaArr
+      .map((pizza) => pizza.totalPrice)
+      .reduce((a, b) => +a + +b, 0);
+    setTotalItems(myTotalItems);
+    setTotalPrice(myTotalPrice);
+  };
+
   return (
     <div className="cart-wrapper">
       <section className="order-wrapper">
-        {arr.map((pizza, index) => (
-          <PizzaItem pizza={pizza} key={index} />
+        {pizzaArr.map((pizza, index) => (
+          <PizzaItem
+            pizza={pizza}
+            key={index}
+            changeOrder={changeOrder}
+            id={index}
+          />
         ))}
       </section>
       <section className="total-wrapper">
