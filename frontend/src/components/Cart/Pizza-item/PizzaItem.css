@@ -23,6 +23,7 @@
 
 .ingredients {
   display: flex;
+  overflow: auto;
 }
 
 .ingredients p {
