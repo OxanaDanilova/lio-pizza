@@ -9,6 +9,8 @@ export default function PizzaItem({ pizza, changeOrder, id, deleteOrder }) {
 
   useEffect(() => {
     setOrder(pizza);
+    setSize(pizza.selectedSize);
+    setQuantity(pizza.quantity);
   }, [pizza]);
   const deleteCurrentOrder = () => {
     deleteOrder(order.name);
@@ -60,7 +62,11 @@ export default function PizzaItem({ pizza, changeOrder, id, deleteOrder }) {
           onClick={() => deleteCurrentOrder()}
         />
       </div>
-      <select className="pizza-size" onChange={(e) => changeSize(e)}>
+      <select
+        value={size}
+        className="pizza-size"
+        onChange={(e) => changeSize(e)}
+      >
         <option value="small">small</option>
         <option value="medium">medium</option>
         <option value="big">big</option>
