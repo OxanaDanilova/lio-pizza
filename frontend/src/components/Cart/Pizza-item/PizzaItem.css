@@ -4,8 +4,10 @@
   justify-content: space-between;
   align-items: center;
   margin: 1rem auto;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid darkblue;
+  border-bottom: 2px solid #ff9904;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 1rem;
 }
 
 .image-wrapper img {
@@ -41,4 +43,21 @@
 
 .delete-icon:hover {
   color: red;
+}
+select {
+  width: 5rem;
+  height: 2rem;
+}
+input {
+  width: 2.2rem;
+  text-align: center;
+  height: 1.8rem;
+}
+
+input,
+select {
+  outline: none;
+  border: none;
+  color: rgb(255, 89, 0);
+  font-weight: bold;
 }
