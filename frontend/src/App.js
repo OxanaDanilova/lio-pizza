@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import PizzaList from "./components/PizzaList";
 import Cart from "./components/Cart/Cart";
+import About from "./components/About/About";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -36,7 +37,7 @@ function App() {
             <NavLink to="/cart" className="nav-link cart">
               <div>Cart</div>
             </NavLink>
-            <NavLink className="nav-link about-us">
+            <NavLink to="/about" className="nav-link about-us">
               <div>About us</div>
             </NavLink>
           </nav>
@@ -50,6 +51,7 @@ function App() {
             path={"/cart"}
             element={<Cart arr={cart} setCart={setCart} />}
           />
+          <Route path={"/about"} element={<About />} />
         </Routes>
       </div>
     </Router>
