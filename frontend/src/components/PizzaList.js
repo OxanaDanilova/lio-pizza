@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./PizzaList.css";
 import axios from "axios";
 
 function PizzaList({ addToCart, orders }) {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [data2, setData2] = useState(data);
   useEffect(() => {
@@ -75,7 +77,11 @@ function PizzaList({ addToCart, orders }) {
         <div className="sidebar-pizza-logo"></div>
         <div className="address"> Antunisstr.44 65781 Köln</div>
         <div className="tel">034 767 989 890</div>
-        <div className="cart-fa" data-icon={orders}>
+        <div
+          className="cart-fa"
+          data-icon={orders}
+          onClick={() => navigate("/cart")}
+        >
           <i className="fa-solid fa-cart-shopping"></i>
         </div>
       </div>

@@ -61,4 +61,5 @@ select {
   border: none;
   color: rgb(255, 89, 0);
   font-weight: bold;
+  cursor: pointer;
 }
