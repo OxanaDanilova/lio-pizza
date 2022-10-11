@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import {
   BrowserRouter as Router,
   NavLink,
@@ -9,6 +10,11 @@ import PizzaList from "./components/PizzaList";
 import Cart from "./components/Cart/Cart";
 
 function App() {
+  const [cart, setCart] = useState([]);
+  const addToCart = (order) => {
+    setCart([...cart, order]);
+  };
+
   return (
     <Router>
       <div className="home">
@@ -36,8 +42,14 @@ function App() {
           </nav>
         </header>
         <Routes>
-          <Route path={"/"} element={<PizzaList />} />
-          <Route path={"/cart"} element={<Cart />} />
+          <Route
+            path={"/"}
+            element={<PizzaList addToCart={addToCart} orders={cart.length} />}
+          />
+          <Route
+            path={"/cart"}
+            element={<Cart arr={cart} setCart={setCart} />}
+          />
         </Routes>
       </div>
     </Router>

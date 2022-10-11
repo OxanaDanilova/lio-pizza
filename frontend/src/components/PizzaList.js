@@ -2,12 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./PizzaList.css";
 import axios from "axios";
 
-function PizzaList() {
+function PizzaList({ addToCart, orders }) {
   const [data, setData] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [orderNum, setOrderNum] = useState(0);
+  //const [cart, setCart] = useState([]);
+  //const [orderNum, setOrderNum] = useState(0);
   const [data2, setData2] = useState(data);
-  console.log(data2);
   useEffect(() => {
     async function getData() {
       const apiData = await axios.get("http://localhost:5000/pizza");
@@ -19,10 +18,9 @@ function PizzaList() {
   function cartHandler(e) {
     const cartFilter = data.filter((el) => el.name === e.target.name);
     const cartObject = cartFilter[0];
-    setCart([...cart, cartObject]);
-    setOrderNum(cart.length + 1);
+    addToCart(cartObject);
+    //setOrderNum(cart.length + 1);
   }
-  console.log(cart);
   function searchHandler(e) {
     if (e.target.value === "All") {
       setData2(data);
@@ -74,7 +72,7 @@ function PizzaList() {
         <div className="sidebar-pizza-logo"></div>
         <div className="address"> Antunisstr.44 65781 Köln</div>
         <div className="tel">034 767 989 890</div>
-        <div className="cart-fa" data-icon={orderNum}>
+        <div className="cart-fa" data-icon={orders}>
           <i className="fa-solid fa-cart-shopping"></i>
         </div>
       </div>

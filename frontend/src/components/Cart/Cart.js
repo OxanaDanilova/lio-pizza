@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Cart.css";
 import PizzaItem from "./Pizza-item/PizzaItem";
 
-const arr = [
+/* const arr = [
   {
     name: "Margherita",
     ingredients: ["Mozzarella", "Tomate"],
@@ -29,9 +29,9 @@ const arr = [
     },
     id: 1,
   },
-];
+]; */
 
-export default function Cart() {
+export default function Cart({ arr, setCart }) {
   const startTottalPrice = arr
     .map((pizza) => pizza.price.small)
     .reduce((a, b) => a + b);
@@ -67,6 +67,10 @@ export default function Cart() {
       return pizza.name !== name;
     });
     setPizzaArr(updatedArr);
+    const updatedCartArr = arr.filter((pizza, index) => {
+      return pizza.name !== name;
+    });
+    setCart(updatedCartArr);
     const myTotalItems = updatedArr
       .map((pizza) => pizza.quantity)
       .reduce((a, b) => +a + +b, 0);
