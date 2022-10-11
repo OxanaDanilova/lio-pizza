@@ -69,9 +69,10 @@ span:nth-child(6) {
     left: 35px;
     top: 20px;
     rotate: -50deg;
-    width: 36%;
-    height: 36%;
-    background-image: url("./tongue-out.png");
+    width: 38%;
+    height: 38%;
+    font-size: 1.8vw;
+    background-image: url("./pizza.png");
     background-size: cover;
 }
 

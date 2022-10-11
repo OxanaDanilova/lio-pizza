@@ -174,16 +174,4 @@ img {
  
  
 }
-.sidebar-logo span {
-    position: absolute;
-    font-size: 1.8vw;
-    
-}
 
-.sidebar-logo span:nth-child(6) {
- 
-    width: 38%;
-    height: 38%;
-    background-image: url("../pizza.png");
-   
-}
