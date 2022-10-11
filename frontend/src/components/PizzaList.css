@@ -57,9 +57,12 @@ img {
     margin-bottom: 4%;
 }
 .card-info {
+    margin: 0 auto;
     overflow: hidden;
     font-size: 1vw;
    height: 6vw;
+   width: 80%;
+ 
  
 }
 .cart-btn{
