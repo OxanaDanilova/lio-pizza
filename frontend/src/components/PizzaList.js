@@ -51,7 +51,7 @@ function PizzaList({ addToCart, orders }) {
               </div>
             );
           })
-          .reverse()}
+          }
       </section>
       <div className="sidebar">
         <div className="search">
@@ -59,7 +59,7 @@ function PizzaList({ addToCart, orders }) {
             <label htmlFor="search"></label>
             <select className="select" id="search" onChange={searchHandler}>
               <option value="All">All</option>
-              <option value="Capricciosa">Capricciosa</option>{" "}
+              <option value="Capricciosa">Capricciosa</option>
               {/* value={data? data[0].name :""} */}
               <option value="Diavola">Diavola</option>
               <option value="Margherita">Margherita</option>
@@ -74,7 +74,15 @@ function PizzaList({ addToCart, orders }) {
           </form>
         </div>
         <div className="sidebar-title">Pizza Lio </div>
-        <div className="sidebar-pizza-logo"></div>
+        <div className="sidebar-logo">
+            <span>p</span>
+            <span>i</span>
+            <span>z</span>
+            <span>z</span>
+            <span>a</span>
+            <span></span>
+          </div>
+        
         <div className="address"> Antunisstr.44 65781 Köln</div>
         <div className="tel">034 767 989 890</div>
         <div
