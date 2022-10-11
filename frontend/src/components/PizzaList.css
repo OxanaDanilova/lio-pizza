@@ -37,9 +37,8 @@ section {
     -moz-border-radius: 15%;
     -ms-border-radius: 15%;
     -o-border-radius: 15%;
-    animation: show 1s .5s linear forwards;
-    -webkit-animation: show 1s .5s linear forwards;
-    
+    animation: show .5s .5s linear forwards;
+    -webkit-animation: show .5s .5s linear forwards;
 }
 .card-img {
     grid-column: 1/-1;
