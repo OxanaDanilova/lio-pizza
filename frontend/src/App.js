@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import PizzaList from './components/PizzaList';
+import About from './components/About';
 
 function App() {
  
@@ -42,7 +43,7 @@ function App() {
 
       <div>Cart</div>
     </NavLink>
-    <NavLink className="nav-link about-us">
+    <NavLink  to="/about" className="nav-link about-us">
      <div>About us</div>
     </NavLink>
     </nav>
@@ -50,6 +51,7 @@ function App() {
   </header>
     <Routes>
     <Route path={"/"} element={< PizzaList />} />
+    <Route path={"/about" } element={< About />} />
     </Routes>
     </div> 
     

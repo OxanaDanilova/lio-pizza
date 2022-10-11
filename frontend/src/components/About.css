@@ -1,0 +1,104 @@
+ 
+ .home {
+    height: 100vh;
+    /* background-image: radial-gradient(transparent, rgb(243, 238, 238)), url("../pizza2.jpg");  */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    overflow: hidden;
+    user-select: none;
+}
+
+header {
+    position: relative;
+    grid-column: 1/6;
+    background-color: #ffb242;
+    height: 10vh;
+    font-family: "Carter One", cursive;
+}
+
+.logo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 8%;
+    top: 20%;
+    width: 5vw;
+    height: 5vw;
+    opacity: 0;
+    animation: show 1.5s 1.5s linear forwards;
+    -webkit-animation: show 1.5s 1.5s linear forwards;
+}
+span {
+    position: absolute;
+    font-size: 1.5vw;
+    
+}
+span:nth-child(1) {
+    rotate: -90deg;
+    left: 0px;
+    top: 25px;
+    
+}
+span:nth-child(2) {
+    rotate: -80deg;
+    left: 10px;
+    top: 10px;
+    
+}
+span:nth-child(3) {
+    rotate: -50deg;
+    left: 13px;
+    top: -4px;
+    
+}
+span:nth-child(4) {
+    rotate: -28deg;
+    left: 28px;
+    top: -14px;
+   
+}
+span:nth-child(5) {
+    rotate: -5deg;
+    left: 45px;
+    top: -20px;
+}
+span:nth-child(6) {
+    left: 35px;
+    top: 20px;
+    rotate: -50deg;
+    width: 30px;
+    height: 30px;
+    background-image: url("../tongue-out.png");
+    background-size: cover;
+}
+
+
+.nav {
+    display: flex;
+    column-gap: 8vw;
+    font-size: 1.3vw;
+    position: absolute;
+    top: 60%;
+    left: -50px;
+    filter: blur(5px);
+    -webkit-filter: blur(3px);
+    opacity: 0;
+    animation: move-nav 1.5s linear forwards, show 1.4s 1.5s forwards;
+    -webkit-animation: move-nav 1.5s linear forwards, show 1.4s 1.5s forwards;
+}
+.nav-link:hover{
+    color: #4b879b;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.home-nav,
+.cart,
+.about-us {
+    text-decoration: none;
+    color: white;
+}
