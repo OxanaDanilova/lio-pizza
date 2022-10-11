@@ -6,6 +6,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import ScrollToTop from "./components/Scroll";
 import PizzaList from "./components/PizzaList";
 import Cart from "./components/Cart/Cart";
 
@@ -41,6 +42,7 @@ function App() {
             </NavLink>
           </nav>
         </header>
+          <ScrollToTop>
         <Routes>
           <Route
             path={"/"}
@@ -51,6 +53,7 @@ function App() {
             element={<Cart arr={cart} setCart={setCart} />}
           />
         </Routes>
+    </ScrollToTop>
       </div>
     </Router>
   );

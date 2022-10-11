@@ -123,6 +123,7 @@ img {
 }
 .cart-fa {
   font-size: 3vw;
+  cursor: pointer;
 }
 .cart-fa::after {
   position: absolute;

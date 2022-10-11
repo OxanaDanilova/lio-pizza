@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import {useNavigate} from "react-router-dom";
 import "./PizzaList.css";
 import axios from "axios";
 
-function PizzaList({ addToCart, orders }) {
+function PizzaList({ addToCart, orders  }) {
+  const navigate = useNavigate()
   const [data, setData] = useState([]);
   const [data2, setData2] = useState(data);
   useEffect(() => {
@@ -17,7 +19,6 @@ function PizzaList({ addToCart, orders }) {
     const cartFilter = data.filter((el) => el.name === e.target.name);
     const cartObject = cartFilter[0];
     addToCart(cartObject);
-    //setOrderNum(cart.length + 1);
   }
   function searchHandler(e) {
     if (e.target.value === "All") {
@@ -25,6 +26,7 @@ function PizzaList({ addToCart, orders }) {
     } else {
       const filteredData = data.filter((el) => el.name === e.target.value);
       setData2(filteredData);
+      
     }
   }
   return (
@@ -39,8 +41,8 @@ function PizzaList({ addToCart, orders }) {
                 </div>
                 <div className="card-name">{card.name}</div>
                 <div className="card-info">{card.info}</div>
-                <button
-                  className="cart-btn"
+                <button 
+              className="cart-btn"
                   name={card.name}
                   onClick={cartHandler}
                 >
@@ -57,8 +59,7 @@ function PizzaList({ addToCart, orders }) {
             <label htmlFor="search"></label>
             <select className="select" id="search" onChange={searchHandler}>
               <option value="All">All</option>
-              <option value="Capricciosa">Capricciosa</option>{" "}
-              {/* value={data? data[0].name :""} */}
+              <option value="Capricciosa">Capricciosa</option>
               <option value="Diavola">Diavola</option>
               <option value="Margherita">Margherita</option>
               <option value="Prosciutto">Prosciutto</option>
@@ -75,7 +76,7 @@ function PizzaList({ addToCart, orders }) {
         <div className="sidebar-pizza-logo"></div>
         <div className="address"> Antunisstr.44 65781 Köln</div>
         <div className="tel">034 767 989 890</div>
-        <div className="cart-fa" data-icon={orders}>
+        <div className="cart-fa" data-icon={orders} onClick={ ()=> navigate("/cart")}>
           <i className="fa-solid fa-cart-shopping"></i>
         </div>
       </div>
