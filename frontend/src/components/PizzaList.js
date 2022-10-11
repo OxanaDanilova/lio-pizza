@@ -43,7 +43,7 @@ function PizzaList() {
   return (
    
     <main>
-      <section >
+      <section className="cards" >
         {data2.map((card)=>{
           return(
             <div className="card" key={card._id}>
@@ -55,7 +55,7 @@ function PizzaList() {
               <button className="cart-btn" name={card.name} onClick={cartHandler}>Add to Cart</button>
             </div>
           )
-        }).reverse()}
+        })}
       </section>
       <div className='sidebar'>
       <div className="search">
@@ -69,6 +69,9 @@ function PizzaList() {
   <option value="Margherita">Margherita</option>
   <option value="Prosciutto">Prosciutto</option>
   <option value="Wurstel">Wurstel</option>
+  <option value="Pizza mit vier Käsesorten">Pizza mit vier Käsesorten</option>
+  <option value="Pizza Salmone">Pizza Salmone</option>
+  <option value="Pizza Lio">Pizza Lio</option>
   </select>
 
 </form>
