@@ -1,0 +1,44 @@
+.pizza-wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid darkblue;
+}
+
+.image-wrapper img {
+  width: 12rem;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.text-wrapper {
+  width: 30rem;
+  text-align: left;
+}
+
+.ingredients {
+  display: flex;
+}
+
+.ingredients p {
+  margin-right: 1rem;
+  font-style: italic;
+}
+
+.pizza-info {
+  text-align: justify;
+  font-size: 0.9rem;
+}
+
+.delete-icon {
+  height: 2rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: red;
+}
