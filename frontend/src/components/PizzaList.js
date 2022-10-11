@@ -4,8 +4,6 @@ import axios from "axios";
 
 function PizzaList({ addToCart, orders }) {
   const [data, setData] = useState([]);
-  //const [cart, setCart] = useState([]);
-  //const [orderNum, setOrderNum] = useState(0);
   const [data2, setData2] = useState(data);
   useEffect(() => {
     async function getData() {
@@ -65,6 +63,11 @@ function PizzaList({ addToCart, orders }) {
               <option value="Margherita">Margherita</option>
               <option value="Prosciutto">Prosciutto</option>
               <option value="Wurstel">Wurstel</option>
+              <option value="Pizza mit vier Käsesorten">
+                Pizza mit vier Käsesorten
+              </option>
+              <option value="Pizza Salmone">Pizza Salmone</option>
+              <option value="Pizza Lio">Pizza Lio</option>
             </select>
           </form>
         </div>
