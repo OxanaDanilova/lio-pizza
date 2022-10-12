@@ -21,6 +21,7 @@ main {
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.2);
   color: black;
+ 
 }
 
 .card {
@@ -38,8 +39,10 @@ main {
   -moz-border-radius: 15%;
   -ms-border-radius: 15%;
   -o-border-radius: 15%;
+ 
   animation: show 0.5s 0.5s linear forwards;
   -webkit-animation: show 0.5s 0.5s linear forwards;
+  
 }
 .card-img {
   grid-column: 1/-1;
@@ -78,6 +81,11 @@ img {
   -ms-border-radius: 10%;
   -o-border-radius: 10%;
   cursor: pointer;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
 }
 .cart-btn:hover {
   box-shadow: inset 0px 0px 15px rgb(182, 80, 3);
