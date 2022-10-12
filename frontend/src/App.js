@@ -6,9 +6,11 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+
 import PizzaList from "./components/PizzaList";
 import Cart from "./components/Cart/Cart";
 import About from "./components/About/About";
+
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -54,7 +56,7 @@ function App() {
           <Route path={"/about"} element={<About />} />
         </Routes>
       </div>
-    </Router>
+    </Router >
   );
 }
 
